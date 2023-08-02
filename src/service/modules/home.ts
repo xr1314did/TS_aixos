@@ -8,7 +8,7 @@ interface IHomeData {
 	success: boolean
 }
 
-hyRequest.request<IHomeData>({
+hyRequest.get<IHomeData>({
   url: "/home/multidata"
 }).then(res => {
   console.log(res)

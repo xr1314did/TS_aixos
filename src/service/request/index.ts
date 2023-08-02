@@ -62,8 +62,18 @@ class HYRequest {
       })
     })
   }
-  get(){}
-  post(){}
+  get<T = any>(config: HYRequestConfig<T>){
+    return this.request({...config, method: "GET"})
+  }
+  post<T = any>(config: HYRequestConfig<T>){
+    return this.request({...config, method: "POST"})
+  }
+  delete<T = any>(config: HYRequestConfig<T>){
+    return this.request({...config, method: "DELETE"})
+  }
+  patch<T = any>(config: HYRequestConfig<T>){
+    return this.request({...config, method: "PATCH"})
+  }
 
 }
 export default HYRequest

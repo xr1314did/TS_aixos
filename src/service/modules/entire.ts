@@ -25,5 +25,5 @@ hyRequest2.request<IEntireListData>({
     }
   }
 }).then(res => {
-  console.log(res, res.list);
+  console.log(res);
 })
